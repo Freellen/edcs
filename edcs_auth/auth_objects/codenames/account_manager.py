@@ -1,0 +1,18 @@
+account_manager = [
+    "auth.add_user",
+    "auth.change_permission",
+    "auth.change_user",
+    "auth.delete_permission",
+    "auth.delete_user",
+    "auth.view_group",
+    "auth.view_permission",
+    "auth.view_user",
+    "edcs_auth.add_userprofile",
+    "edcs_auth.change_userprofile",
+    "edcs_auth.delete_userprofile",
+    "edcs_auth.view_userprofile",
+    "edcs_auth.add_role",
+    "edcs_auth.change_role",
+    "edcs_auth.delete_role",
+    "edcs_auth.view_role",
+]

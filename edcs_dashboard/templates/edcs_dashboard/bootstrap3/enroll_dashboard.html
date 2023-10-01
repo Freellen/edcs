@@ -1,0 +1,116 @@
+{% extends 'edcs_dashboard/bootstrap3/base.html' %}
+{% load subject_dashboard_extras %}
+{% block main-content %}
+     <div class="workplace">
+
+         <div class="row">
+             <!----------------------------- start action item menu -------------------------------->
+             <div class="col-md-12">
+                 <nav class="navbar" role="navigation">
+                     <div class="container-fluid">
+                         <div class="navbar-header">
+                             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                 <span class="sr-only">Toggle navigation</span>
+                                 <span class="icon-bar"></span>
+                                 <span class="icon-bar"></span>
+                                 <span class="icon-bar"></span>
+                             </button>
+                             <a class="navbar-brand" href="#"></a>
+                         </div>
+
+                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                             <ul class="nav navbar-nav navbar-right">
+                                 <li class="dropdown">
+                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Action Linked PRN <span class="caret"></span></a>
+                                     <ul class="dropdown-menu" role="menu">
+
+                                         <li><a href="#">Adverse Event</a></li>
+                                         <li><a href="#">Subject Transfer</a></li>
+                                         <li><a href="#">Protocol Deviation/Violation</a></li>
+                                     </ul>
+                                 </li>
+                                 <li class="dropdown">
+                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">PRN CRFs<span class="caret"></span></a>
+                                     <ul class="dropdown-menu" role="menu">
+                                         <li><a href="#">CD4 Result</a></li>
+                                         <li><a href="#">Viral Load</a></li>
+                                     </ul>
+                                 </li>
+                                 <li class="dropdown">
+                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">PRN Requisition <span class="caret"></span></a>
+                                     <ul class="dropdown-menu" role="menu">
+                                         <li><a href="#">CD4</a></li>
+                                     </ul>
+                                 </li>
+                                 <li><a href="#">End of Study</a></li>
+                             </ul>
+                         </div>
+
+                     </div>
+                 </nav>
+             </div>
+             <!----------------------------- end action item menu -------------------------------->
+
+             <!-------------------- start screening patients --------------------->
+             <div class="col-md-8">
+                 <div class="head clearfix">
+                     <div class="isw-grid"></div>
+                     <h1>Enrolled Patients</h1>
+                 </div>
+                 <div class="block-fluid">
+                     <table cellpadding="0" cellspacing="0" width="100%" class="table">
+                         <thead>
+                         <tr>
+                             <th width="3%">#Code</th>
+                             <th width="40%">Dashboard</th>
+                             <th width="15%">Visit</th>
+                             <th width="15%">Expected</th>
+                             <th width="15%">Modified</th>
+                         </tr>
+                         </thead>
+                         <tbody>
+                         {% for schedule in schedules %}
+                             <tr>
+                                 <td>{{ schedule.visit_code }}</td>
+                                 <td>
+                                     {% appointment_button schedule.visit_code%}
+
+                                     {% start_visit  schedule.visit_code %}
+
+                                     {% start_button  schedule %}
+
+                                     {% done_button  %}
+
+                                     {% form_button schedule.visit_code %}
+
+                                 </td>
+                                 <td>{{ schedule.visit_title }}</td>
+                                 {% expected_date schedule.visit_code as expectd%}
+                                 <td>{{ expectd|date:"d M Y" }}</td>
+                                 {% modified_date schedule.visit_code as modiified %}
+                                 <td>{{ modiified|date:"d M Y H:i:s" }}</td>
+                             </tr>
+                         {% endfor %}
+                         </tbody>
+                     </table>
+                 </div>
+             </div>
+             <!-------------------- end screening patients --------------------->
+                 {% side_info_panel object_list %}
+             <!------------------------------------- end patient info -------------------------------------->
+
+             <!------------------------------------- start prn form -------------------------------------->
+
+             <!------------------------------------- end prn form -------------------------------------->
+
+             <!------------------------------------- start consent form -------------------------------------->
+                {% consent_panel %}
+             <!------------------------------------- end consent form -------------------------------------->
+             </div>
+
+         </div>
+
+         <div class="dr"><span></span></div>
+
+     </div>
+{% endblock main-content %}

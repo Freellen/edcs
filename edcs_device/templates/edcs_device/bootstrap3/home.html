@@ -1,0 +1,39 @@
+{% extends 'edcs_dashboard/bootstrap3/base.html' %}
+{% block main-content %}
+    <div class="workplace">
+        <div class="row">
+        <div class="col-md-6">
+            <div class="head clearfix">
+                <div class="isw-settings"></div>
+                <h1>Environment</h1>
+            </div>
+            <div class="block-fluid">
+                <ul class="sList" id="selectable_1">
+                    <li>ID: {{ app_config.device_id }}</li>
+                    <li>Role: {{ app_config.role }}</li>
+                    <li>IP Address: {{ ip_address }}</li>
+                    {% if ip_address is not None %}
+                        <li>Status: <span class="label label-success">Active</span></li>
+                    {% else %}
+                        <li>Status: <span class="label label-info">unknown</span></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="head clearfix">
+                <div class="isw-settings"></div>
+                <h1>Configurations</h1>
+            </div>
+            <div class="block-fluid">
+                <ul class="sList" id="selectable_1">
+                    <li>Central Server: {{ app_config.central_server_id }}</li>
+                    <li>Servers: {{ app_config.server_id_list|default:""|join:", " }}</li>
+                    <li>Node Servers: {{ app_config.node_server_id_list|default:""|join:", " }}</li>
+                    <li>Middleman devices: {{ app_config.middleman_id_list|default:""|join:", " }}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </div>
+{% endblock main-content %}

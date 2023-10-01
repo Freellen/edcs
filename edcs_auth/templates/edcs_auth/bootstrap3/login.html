@@ -1,0 +1,52 @@
+{% extends 'edcs_dashboard/bootstrap3/base.html' %}
+{% load edcs_menu %}
+{% load auth_tags %}
+{% block title %} <title> EDCS | Login </title> {% endblock title %}
+{% block body-content %}
+    <div class="loginBlock" id="login" style="display: block;">
+        <div class="alert {% live_server %} alert-block">
+            <div class="col-md-offset-2"><h4 >U54 Lung Cancer EDC ({% server %})</h4></div>
+            <div class="col-md-offset-1"><h4 style="margin-top: 4%">{% site_name %}</h4></div>
+            {% login_uat_label %}
+        </div>
+        <div class="dr"><span></span></div>
+            <div class="loginForm">
+                <form class="form-horizontal" action="" method="post" id="validation">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+                            <input type="text" name="username" id="inputUsername" placeholder="Username" class="form-control validate[required]"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                            <input type="password" name="password" id="inputPassword" placeholder="Password" class="form-control validate[required]"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-1 col-md-7">
+                            <div class="form-group" style="margin-top: 5px;">
+                                <label class="checkbox"><input type="checkbox"> Remember me</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <input type="submit" class="btn btn-default btn-block" value="Login in">
+                        </div>
+                    </div>
+                </form>
+                <div class="dr"><span></span></div>
+                <div class="footer">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <a href="https://www.gnu.org/licenses/gpl-3.0.en.html" class="btn btn-link btn-block">&copy; Licensed for use under GPL 3.0</a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="" class="btn btn-link btn-block">Version: 1.0.0</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+{% endblock %}

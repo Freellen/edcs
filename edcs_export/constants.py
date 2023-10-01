@@ -1,0 +1,8 @@
+CANCELLED = "cancelled"
+CSV = "CSV"
+DELETE = "D"
+EXPORTED = "exported"
+INSERT = "I"
+UPDATE = "U"
+PROSPECTIVE_DATA = "prospective_data"
+PROSPECTIVE_DATA_DICT = "prospective_data_dict"

@@ -1,0 +1,80 @@
+{% extends 'edcs_dashboard/bootstrap3/base.html' %}
+{% load edcs_dashboard_extras %}
+{% load subject_dashboard_extras %}
+{% load screening_dashboard_extras %}
+{% block main-content %}
+    <div class="workplace">
+            <a href="{{ subject_screening_add_url }}" class="btn btn-sm btn-success tip" title="Screen Patient">
+                <span class="glyphicon glyphicon-plus glyphicon glyphicon-white"></span> Add Subject Screening
+            </a>
+
+            <div class="row">
+                <!-------------------- start screening patients --------------------->
+                <div class="col-md-12">
+                    <div class="head clearfix">
+                        <div class="isw-grid"></div>
+                        <h1>Screened Patients</h1>
+                        <ul class="buttons">
+                            <li><a href="#" class="isw-download"></a></li>
+                            <li><a href="#" class="isw-attachment"></a></li>
+                            <li>
+                                <a href="#" class="isw-settings"></a>
+                                <ul class="dd-list">
+                                    <li><a href="#"><span class="isw-plus"></span> New document</a></li>
+                                    <li><a href="#"><span class="isw-edit"></span> Edit</a></li>
+                                    <li><a href="#"><span class="isw-delete"></span> Delete</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="block-fluid">
+                        <table cellpadding="0" cellspacing="0" width="100%" class="table">
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th width="25%">Dashboard</th>
+                                <th width="10%">Screening ID</th>
+                                <th width="5%">Initials</th>
+                                <th width="5%">Age</th>
+                                <th width="10%">Study ID</th>
+                                <th width="5%">Created by</th>
+                                <th width="25%">Report Date</th>
+                                <th width="10%">Host</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for item in object_list  %}
+                                <tr>
+                                    <td>{{ forloop.counter }}</td>
+                                    <td>
+                                        <!-- optimize this instead of entering item everytime -->
+                                        {% screening_button item %}
+                                        {% eligibility_button item %}
+                                        {% add_consent_button item %}
+                                        {% dashboard_button item %}
+                                    </td>
+                                    <td>{{ item.screening_identifier }}</td>
+                                    <td>{{ item.initials }}</td>
+                                    <td>{{ item.age_in_years }}</td>
+                                    {% if item.consented %}
+                                        <td>{{ item.subject_identifier }}</td>
+                                    {% else %}
+                                        <td> - </td>
+                                    {% endif %}
+                                    <td>{{ item.user_created }}</td>
+                                    <td>{{ item.report_datetime }}</td>
+                                    <td>{{ item.hostname_created }}</td>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                {% pagination %}
+                <!-------------------- end screening patients --------------------->
+            </div>
+
+            <div class="dr"><span></span></div>
+
+        </div>
+{% endblock main-content %}
