@@ -9,7 +9,6 @@ urlpatterns = [
     path("dashboard/", include("edcs_dashboard.urls")),
     path("administration/", AdministrationView.as_view(), name="administration_url"),
     *paths_for_urlpatterns("edcs_device"),
-    # *paths_for_urlpatterns("edcs_ae"),
     *paths_for_urlpatterns("edcs_notification"),
     *paths_for_urlpatterns("edcs_appointment"),
     *paths_for_urlpatterns("edcs_crf"),
@@ -23,6 +22,5 @@ urlpatterns = [
     *paths_for_urlpatterns("edcs_registration"),
     *paths_for_urlpatterns("edcs_visit_schedule"),
     # path("defender/", include("defender.urls")),
-    # path("home/", DashboardView.as_view(), name="home_url"),
     path("", include("edcs_auth.urls")),
 ]
