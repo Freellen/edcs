@@ -18,57 +18,11 @@ class AppointmentMethodsModelMixin(models.Model):
 
     """Mixin of methods for the appointment model only"""
 
-    # @property
-    # def visit(self: AppointmentModelStub) -> SubjectVisitModelStub:
-    #     """Returns the related visit model instance"""
-    #     return getattr(self, self.related_visit_model_attr())
-
     @property
     def facility(self: AppointmentModelStub) -> Facility:
         """Returns the facility instance for this facility name"""
         app_config = django_apps.get_app_config("edc_facility")
         return app_config.get_facility(name=self.facility_name)
-
-    # @classmethod
-    # def related_visit_model_attr(cls: TAppointmentModelStub) -> str:
-    #     fields = []
-    #     for f in cls._meta.get_fields():
-    #         if f.related_model:
-    #             if issubclass(f.related_model, VisitModelMixin):
-    #                 fields.append(f)
-    #     if len(fields) > 1:
-    #         raise AppointmentMethodsModelError(
-    #             f"More than one field on Appointment is related field to a visit model. "
-    #             f"Got {fields}."
-    #         )
-    #     elif len(fields) == 0:
-    #         raise AppointmentMethodsModelError(
-    #             f"{cls} has no related visit model. "
-    #             f"Expected the related visit model to be an instance "
-    #             "of `VisitModelMixin`."
-    #         )
-    #     else:
-    #         related_visit_model_attr = fields[0].name
-    #     return related_visit_model_attr
-    #
-    # @classmethod
-    # def visit_model_cls(cls: TAppointmentModelStub) -> Type[SubjectVisitModelStub]:
-    #     return getattr(cls, cls.related_visit_model_attr()).related.related_model
-    #
-    # @property
-    # def next_by_timepoint(self: AppointmentModelStub) -> AppointmentModelStub:
-    #     """Returns the next appointment or None of all appointments
-    #     for this subject for visit_code_sequence=0.
-    #     """
-    #     return (
-    #         self.__class__.objects.filter(
-    #             subject_identifier=self.subject_identifier,
-    #             timepoint__gt=self.timepoint,
-    #             visit_code_sequence=0,
-    #         )
-    #         .order_by("timepoint")
-    #         .first()
-    #     )
 
     @property
     def last_visit_code_sequence(self: AppointmentModelStub) -> Optional[int]:
