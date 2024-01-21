@@ -68,20 +68,6 @@ class SubjectConsent(
         verbose_name="Screening datetime", null=True, editable=False
     )
 
-    clinic_type = models.CharField(
-        verbose_name="From which type of clinic was the patient selected?",
-        max_length=45,
-        choices=CLINIC,
-        null=True,
-    )
-
-    patient_category = models.CharField(
-        verbose_name="Patient Category?",
-        max_length=45,
-        null=True,
-        choices=PATIENT_CATEGORY,
-    )
-
     gender = models.CharField(
         verbose_name="Gender",
         choices=GENDER,

@@ -28,8 +28,8 @@ class SubjectConsentFormValidatorMixin(FormValidator):
         self.gender = self.cleaned_data.get("gender")
         self.guardian_name = self.cleaned_data.get("guardian_name")
         self.screening_identifier = self.cleaned_data.get("screening_identifier")
-        self.clinic_type = self.cleaned_data.get("clinic_type")
-        self.patient_category = self.cleaned_data.get("patient_category")
+        # self.clinic_type = self.cleaned_data.get("clinic_type")
+        # self.patient_category = self.cleaned_data.get("patient_category")
         self.tz = timezone(settings.TIME_ZONE)
         self.identity = self.cleaned_data.get("identity")
         self.initials = self.cleaned_data.get("initials")
@@ -39,9 +39,9 @@ class SubjectConsentFormValidatorMixin(FormValidator):
 
         self.validate_consent_datetime()
 
-        self.validate_clinic_type()
-
-        self.validate_patient_category()
+        # self.validate_clinic_type()
+        #
+        # self.validate_patient_category()
 
         self.validate_age()
 
@@ -117,29 +117,29 @@ class SubjectConsentFormValidatorMixin(FormValidator):
                 }
             )
 
-    def validate_clinic_type(self) -> None:
-        """Validate clinic_type matches that on the screening form."""
-        if self.clinic_type != self.subject_screening.clinic_type:
-            raise forms.ValidationError(
-                {
-                    "clinic_type": "Clinic Type mismatch. The Clinic Type selected does "
-                    f"not match the Clinic Type selected during screening. "
-                    f"Expected {self.subject_screening.clinic_type}. "
-                    f"Got {self.clinic_type}."
-                }
-            )
+    # def validate_clinic_type(self) -> None:
+    #     """Validate clinic_type matches that on the screening form."""
+    #     if self.clinic_type != self.subject_screening.clinic_type:
+    #         raise forms.ValidationError(
+    #             {
+    #                 "clinic_type": "Clinic Type mismatch. The Clinic Type selected does "
+    #                 f"not match the Clinic Type selected during screening. "
+    #                 f"Expected {self.subject_screening.clinic_type}. "
+    #                 f"Got {self.clinic_type}."
+    #             }
+    #         )
 
-    def validate_patient_category(self) -> None:
-        """Validate patient_category matches that on the screening form."""
-        if self.patient_category != self.subject_screening.patient_category:
-            raise forms.ValidationError(
-                {
-                    "patient_category": "Patient Category mismatch. Patient Category selected does "
-                    f"not match the Patient Category selected during screening. "
-                    f"Expected {self.subject_screening.patient_category}. "
-                    f"Got {self.patient_category}."
-                }
-            )
+    # def validate_patient_category(self) -> None:
+    #     """Validate patient_category matches that on the screening form."""
+    #     if self.patient_category != self.subject_screening.patient_category:
+    #         raise forms.ValidationError(
+    #             {
+    #                 "patient_category": "Patient Category mismatch. Patient Category selected does "
+    #                 f"not match the Patient Category selected during screening. "
+    #                 f"Expected {self.subject_screening.patient_category}. "
+    #                 f"Got {self.patient_category}."
+    #             }
+    #         )
 
     def validate_dob_estimated(self) -> None:
         """Validate patient know date of birth on the screening form."""
