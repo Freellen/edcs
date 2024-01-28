@@ -113,3 +113,16 @@ class FollowUpTest(ListModelMixin):
     class Meta(ListModelMixin.Meta):
         verbose_name = "Follow up Test"
         verbose_name_plural = "Follow up Test"
+
+
+# ****************** new **************************
+class InfoTbDxMade(ListModelMixin):
+    class Meta(ListModelMixin.Meta):
+        verbose_name = "Info TB Diagnosis made"
+        verbose_name_plural = "Info TB Diagnosis made"
+
+
+class OtherDxMade(ListModelMixin):
+    class Meta(ListModelMixin.Meta):
+        verbose_name = "Other Diagnosis made"
+        verbose_name_plural = "Other Diagnosis made"

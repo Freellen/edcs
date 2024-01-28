@@ -97,7 +97,7 @@ class EnrollmentCRF(CrfModelMixin, edcs_models.BaseUuidModel):
         choices=YES_NO_UNKNOWN,
     )
 
-    immuno_diseases_specify = models.DateField(
+    immuno_diseases_specify = models.TextField(
         verbose_name="If yes, to immunosuppressing diseases, please specify?",
         null=True,
         blank=True,

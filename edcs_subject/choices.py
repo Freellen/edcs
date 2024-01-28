@@ -27,7 +27,7 @@ from edcs_constants.constants import (
     YES_PAST_CHEW,
     YES_PAST_CONSUMER,
     YES_PAST_SMOKER,
-    YES_PAST_USER,
+    YES_PAST_USER, YES,
 )
 from edcs_subject.constants import (
     HOSPITAL_CLINIC,
@@ -898,8 +898,48 @@ MEDICAL_CONDITIONS = (
     (OTHER, "Other"),
 )
 
-RESPIRATORY_SAMPLES =(
+RESPIRATORY_SAMPLES = (
     ("yes_two", "Yes, two samples were collected"),
     ("no_one", "No, one sample was collected"),
     ("no", "No, no such samples were collected "),
+)
+
+TB_DIAGNOSIS_MADE = (
+    ("signs_symptoms_only", "Based on clinical signs and symptoms only "),
+    ("signs_symptoms_bacteriology", "Based a combination of signs, symptoms and bacteriology"),
+    (OTHER, "Other"),
+)
+
+TB_TREATMENT_START = (
+    (YES, "Yes"),
+    ("referred_treatment", "Patient referred for treatment"),
+    ("not_started", "Not started"),
+)
+
+TREATMENT_REGIMEN = (
+    ("ds_tb", "DS TB regimen (2RHZE and 4RH)"),
+    ("dr_tb", "DR TB long regimen"),
+    ("dr_short", "DR Short regimen"),
+    ("individual_regimen", "Individualized regimen"),
+)
+
+TREATMENT_REGIMEN_BASED = (
+    ("not_based_result", "Treatment regimen was not based on a test result"),
+    ("phenotypic_dst", "Phenotypic DST"),
+    ("smear_afb", "Smear AFB microscopy"),
+    ("xpert_ultra", "Xpert Ultra"),
+    ("culture", "Culture"),
+    ("xpert_xdr", "Xpert XDR"),
+    ("1nd_line_drugs", "Line probe assay (1st line drugs)"),
+    ("2nd_line_drugs", "Line probe assay (2nd line drugs)"),
+    ("sequencing", "Sequencing"),
+    (OTHER, "Other"),
+)
+
+TREATMENT_OUTCOME = (
+    ("cured", "Cured"),
+    ("completed", "Completed"),
+    ("failed", "Failed"),
+    ("lost_followup", "Lost-to-follow-up"),
+    ("died", "Died"),
 )
