@@ -55,7 +55,8 @@ class DiagnosisCrf(CrfModelMixin, edcs_models.BaseUuidModel):
 
     info_TB_dx_made = models.ManyToManyField(
         InfoTbDxMade,
-        verbose_name="In case TB was diagnosed clinically, based on what information was the diagnosis made?",
+        verbose_name="In case TB was diagnosed clinically, based on what information was the "
+                     "diagnosis made?",
     )
 
     info_TB_dx_made_other = edcs_models.OtherCharField()

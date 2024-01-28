@@ -943,3 +943,193 @@ TREATMENT_OUTCOME = (
     ("lost_followup", "Lost-to-follow-up"),
     ("died", "Died"),
 )
+
+RESPIRATORY_YES = (
+    ("one", "One"),
+    ("two", "Two"),
+    ("three", "Three"),
+)
+
+RESPIRATORY_REASONS = (
+    ("sample_lost ", "sample lost "),
+    ("leaking_container", "Leaking container"),
+    (OTHER, "Other"),
+)
+
+APPEARANCE = (
+    ("watery_salivary", "Watery/salivary"),
+    ("mucoid", "Mucoid"),
+    ("purulent", "Purulent"),
+    ("bloody", "Bloody"),
+)
+
+ACCESSION_STATUS = (
+    ("accepted", "Accepted"),
+    ("rejected", "Rejected"),
+)
+
+AFB_TECHNIQUE = (
+    ("ZN", "ZN"),
+    ("FM", "FM"),
+)
+
+AFB_RESULTS = (
+    ("no_AFB_seen", "no AFB seen"),
+    ("AFB_seen_scanty", "AFB seen, scanty"),
+    ("AFB_Seen_plus1", "AFB Seen , +1"),
+    ("AFB_Seen_plus2", "AFB Seen , +2"),
+    ("AFB_Seen_plus3", "AFB Seen , +3"),
+)
+
+MTB = (
+    ("not_detected", "Not detected"),
+    ("detected_trace", "Detected, trace"),
+    ("detected_very_low", "Detected, very low"),
+    ("detected_low", "Detected, low"),
+    ("detected_medium", "Detected, medium"),
+    ("detected_high", "Detected, high"),
+    ("invalid", "Invalid"),
+    ("error", "Error"),
+    ("no_result", "No result"),
+)
+
+RIF_RESISTANCE = (
+    ("not detected", "Not detected"),
+    ("detected", "Detected"),
+    ("indeterminate", "Indeterminate"),
+)
+
+SPC_CT = (
+    (YES, "YES"),
+    ("no_spc_ct_value", "no SPC-Ct value (no test result)"),
+)
+
+NOT_REPEAT_REASONS = (
+    ("sample_lost ", "sample lost "),
+    ("not_enough_sample", "not enough sample left"),
+    (OTHER, "Other"),
+)
+
+DX_TEST_RESULTS = (
+    (NOT_APPLICABLE, "Not applicable"),
+    ("positive", "positive"),
+    ("negative", "negative"),
+    ("no_result", "no result"),
+)
+
+MIC = (
+    (NOT_APPLICABLE, "Not applicable"),
+    ("resistant", "Resistant"),
+    ("susceptible", "Susceptible"),
+    ("no_result", "No result"),
+)
+
+XPERT_MTB_RIF = (
+    (NOT_APPLICABLE, "Not applicable"),
+    ("rif_resistance_detected", "Rif resistance DETECTED"),
+    ("rif_resistance_not_detected", "Rif Resistance NOT DETECTED"),
+    ("rif_resistance_indeterminate", "Rif Resistance INDETERMINATE"),
+)
+
+XPERT_XDR_INH = (
+    (NOT_APPLICABLE, "Not applicable"),
+    ("low_inh_resistance_detected", "Low INH Resistance DETECTED"),
+    ("inh_resistance_detected", "INH Resistance DETECTED"),
+    ("inh_resistance_not_detected", "INH Resistance NOT DETECTED"),
+    ("inh_resistance_indeterminate", "INH Resistance INDETERMINATE"),
+)
+
+XPERT_XDR_FLQ = (
+    (NOT_APPLICABLE, "Not applicable"),
+    ("low_flq_resistance_detected", "Low FLQ Resistance DETECTED"),
+    ("flq_resistance_detected", "FLQ Resistance DETECTED"),
+    ("flq_resistance_not_detected", "FLQ Resistance NOT DETECTED"),
+    ("flq_resistance_indeterminate", "FLQ Resistance INDETERMINATE"),
+)
+
+XPERT_XDR_AMK = (
+    (NOT_APPLICABLE, "Not applicable"),
+    ("amk_resistance_detected", "AMK Resistance DETECTED"),
+    ("amk_resistance_not_detected", "AMK Resistance NOT DETECTED"),
+    ("amk_resistance_indeterminate", "AMK Resistance INDETERMINATE"),
+)
+
+XPERT_XDR_KAN = (
+    (NOT_APPLICABLE, "Not applicable"),
+    ("kan_resistance_detected", "KAN Resistance DETECTED"),
+    ("kan_resistance_not_detected", "KAN Resistance NOT DETECTED"),
+    ("kan_resistance_indeterminate", "KAN Resistance INDETERMINATE"),
+)
+
+XPERT_XDR_CAP = (
+    (NOT_APPLICABLE, "Not applicable"),
+    ("cap_resistance_detected", "CAP Resistance DETECTED"),
+    ("cap_resistance_not_detected", "CAP Resistance NOT DETECTED"),
+    ("cap_resistance_indeterminate", "CAP Resistance INDETERMINATE"),
+)
+
+XPERT_XDR_ETH = (
+    (NOT_APPLICABLE, "Not applicable"),
+    ("eth_resistance_detected", "ETH Resistance DETECTED"),
+    ("eth_resistance_not_detected", "ETH Resistance NOT DETECTED"),
+)
+
+MTBDR_PLUS = (
+    ("conjugate_control", "Conjugate Control"),
+    ("amplification_control ", "Amplification Control "),
+    ("m_tuberculosis_complex_tub", "M. tuberculosis complex TUB"),
+    ("rpoB_locus_control_rpoB ", "rpoB Locus Control rpoB "),
+    ("rpoB_wild_type_probe_1_rpoB_WT1", "rpoB wild type probe 1 rpoB WT1"),
+    ("wild_type_probe_2_rpoB_WT2", "wild type probe 2 rpoB WT2"),
+    ("rpoB_wild_type_probe_3_rpoB_WT3", "rpoB wild type probe 3 rpoB WT3"),
+    ("rpoB_wild_type_probe_4_rpoB_WT4", "rpoB wild type probe 4 rpoB WT4"),
+    ("rpoB_wild_type_probe_5_rpoB_WT5", "rpoB wild type probe 5 rpoB WT5"),
+    ("rpoB_wild_type_probe_6_rpoB_WT6", "rpoB wild type probe 6 rpoB WT6"),
+    ("rpoB_wild_type_probe_7_rpoB_WT7", "rpoB wild type probe 7 rpoB WT7"),
+    ("rpoB_wild_type_probe_8_rpoB_WT8", "rpoB wild type probe 8 rpoB WT8"),
+    ("rpoB_mutation_probe_1_rpoB_MUT1", "rpoB mutation probe 1 rpoB MUT1"),
+    ("rpoB_mutation_probe_2A_rpoB_MUT2A", "rpoB mutation probe 2A rpoB MUT2A"),
+    ("rpoB_mutation_probe_2B_rpoB_MUT2B", "rpoB mutation probe 2B rpoB MUT2B"),
+    ("mutation_probe_3_rpoB_MUT3", "mutation probe 3 rpoB MUT3"),
+    ("katG_locus_control_katG", "katG Locus Control katG"),
+    ("katG_wild_type_probe_katG_WT", "katG wild type probe katG WT"),
+    ("mutation_probe_1_katG_MUT1", "mutation probe 1 katG MUT1"),
+    ("katG_mutation_probe_2_katG_MUT2", "katG mutation probe 2 katG MUT2"),
+    ("inhA_locus_control_inhA", "inhA Locus Control inhA"),
+    ("inhA_wild_type_probe_1_inhA_WT1", "inhA wild type probe 1 inhA WT1"),
+    ("inhA_wild_type_probe_2_inhA_WT2", "inhA wild type probe 2 inhA WT2"),
+    ("inhA_mutation_probe_1_inhA_MUT1", "inhA mutation probe 1 inhA MUT1"),
+    ("inhA_mutation_probe_2_inhA_MUT2", "inhA mutation probe 2 inhA MUT2"),
+    ("inhA_mutation_probe_3A_inhA_MUT3A", "inhA mutation probe 3A inhA MUT3A"),
+    ("inhA_mutation_probe_3B_inhA_MUT3B", "inhA mutation probe 3B inhA MUT3B"),
+)
+
+MTBDRSI = (
+    ("Conjugate_Control", "Conjugate Control"),
+    ("amplification_control", "Amplification Control"),
+    ("m_tuberculosis_complex_TUB", "M. tuberculosis complex TUB"),
+    ("gyrA_locus_control_gyrA", "gyrA Locus Control gyrA"),
+    ("gyrA_wild_type_probe_1_gyrA_WT1", "gyrA wild type probe 1 gyrA WT1"),
+    ("gyrA_wild_type_probe_2_gyrA_WT2", "gyrA wild type probe 2 gyrA WT2"),
+    ("gyrA_wild_type_probe_3 gyrA_WT3", "gyrA wild type probe 3 gyrA WT3"),
+    ("gyrA_mutation_probe_1_gyrA_MUT1", "gyrA mutation probe 1 gyrA MUT1"),
+    ("gyrA_mutation_probe_2_gyrA_MUT2", "gyrA mutation probe 2 gyrA MUT2"),
+    ("gyrA_mutation_probe_3A_gyrA MUT3A", "gyrA mutation probe 3A gyrA MUT3A"),
+    ("gyrA_mutation_probe_3B_gyrA MUT3B", "gyrA mutation probe 3B gyrA MUT3B"),
+    ("gyrA_mutation_probe_3C_gyrA MUT3C", "gyrA mutation probe 3C gyrA MUT3C"),
+    ("gyrA_mutation_probe_3D_gyrA MUT3D", "gyrA mutation probe 3D gyrA MUT3D"),
+    ("gyrB_Locus_Control_gyrB", "gyrB Locus Control gyrB"),
+    ("gyrB_wild_type_probe_gyrB_WT", "gyrB wild type probe gyrB WT"),
+    ("gyrB_mutation_probe_1_gyrB_MUT1", "gyrB mutation probe 1 gyrB MUT1"),
+    ("gyrB_mutation_probe_2_gyrB_MUT2", "gyrB mutation probe 2 gyrB MUT2"),
+    ("rrs_Locus_Control_rrs", "rrs Locus Control rrs"),
+    ("rrs_wild_type_probe_1_rrs_WT1", "rrs wild type probe 1 rrs WT1"),
+    ("rrs_wild_type_probe_2_rrs_WT2", "rrs wild type probe 2 rrs WT2"),
+    ("rrs_mutation_probe_1_rrs_MUT1", "rrs mutation probe 1 rrs MUT1"),
+    ("rrs_mutation_probe_2_rrs_MUT2", "rrs mutation probe 2 rrs MUT2"),
+    ("eis_locus_control_eis", "eis Locus Control eis"),
+    ("eis_wild_type_probe_1_eis_WT1", "eis wild type probe 1 eis WT1"),
+    ("eis_wild_type_probe_2_eis_WT2", "eis wild type probe 2 eis WT2"),
+    ("eis_wild_type_probe_3_eis_WT3", "eis wild type probe 3 eis WT3"),
+    ("eis_mutation_probe_1_eis_MUT", "eis mutation probe 1 eis MUT"),
+)
