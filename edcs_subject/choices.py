@@ -886,3 +886,20 @@ INFORMANT_RELATIONSHIP = (
     (UNKNOWN, "Unknown"),
     (OTHER, "Other"),
 )
+
+MEDICAL_CONDITIONS = (
+    ("diabetes_mellitus", "Diabetes Mellitus"),
+    ("hypertension", "Hypertension"),
+    ("COPD", "Chronic obstructive pulmonary disease (COPD)"),
+    ("malignancy", "Malignancy"),
+    ("heart_disease", "Heart disease"),
+    ("CKD", "Chronic kidney disease (CKD)"),
+    ("organ_transplant", "Organ transplant"),
+    (OTHER, "Other"),
+)
+
+RESPIRATORY_SAMPLES =(
+    ("yes_two", "Yes, two samples were collected"),
+    ("no_one", "No, one sample was collected"),
+    ("no", "No, no such samples were collected "),
+)
