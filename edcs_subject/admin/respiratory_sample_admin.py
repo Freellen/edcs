@@ -5,7 +5,7 @@ from edcs_crf.admin import crf_status_fieldset_tuple
 from edcs_model_admin import SimpleHistoryAdmin
 
 from ..admin_site import edcs_subject_admin
-# from ..forms import ClinicalReviewForm
+from ..forms import RespiratorySampleForm
 from ..models import RespiratorySample
 from .modeladmin_mixins import CrfModelAdminMixin
 
@@ -13,7 +13,7 @@ from .modeladmin_mixins import CrfModelAdminMixin
 @admin.register(RespiratorySample, site=edcs_subject_admin)
 class SubjectRespiratorySampleAdmin(CrfModelAdminMixin, SimpleHistoryAdmin):
 
-    # form = ClinicalReviewForm
+    form = RespiratorySampleForm
 
     fieldsets = (
         (None, {"fields": ("subject_visit", "report_datetime")}),

@@ -27,7 +27,7 @@ from edcs_constants.constants import (
     YES_PAST_CHEW,
     YES_PAST_CONSUMER,
     YES_PAST_SMOKER,
-    YES_PAST_USER, YES,
+    YES_PAST_USER, YES, ERROR,
 )
 from edcs_subject.constants import (
     HOSPITAL_CLINIC,
@@ -41,7 +41,7 @@ from edcs_subject.constants import (
     POS_PANCYTOKERATINE,
     POS_TTF1,
     SCHEDULED,
-    UNSCHEDULED, YES_TWO,
+    UNSCHEDULED, YES_TWO, ONE, TWO, THREE, NO_SPC,
 )
 
 from .constants import NON_SMALL_CELL
@@ -945,12 +945,14 @@ TREATMENT_OUTCOME = (
 )
 
 RESPIRATORY_YES = (
-    ("one", "One"),
-    ("two", "Two"),
-    ("three", "Three"),
+    (NOT_APPLICABLE, "Not applicable"),
+    (ONE, "One"),
+    (TWO, "Two"),
+    (THREE, "Three"),
 )
 
 RESPIRATORY_REASONS = (
+    (NOT_APPLICABLE, "Not applicable"),
     ("sample_lost ", "sample lost "),
     ("leaking_container", "Leaking container"),
     (OTHER, "Other"),
@@ -989,7 +991,7 @@ MTB = (
     ("detected_medium", "Detected, medium"),
     ("detected_high", "Detected, high"),
     ("invalid", "Invalid"),
-    ("error", "Error"),
+    (ERROR, "Error"),
     ("no_result", "No result"),
 )
 
@@ -1001,7 +1003,7 @@ RIF_RESISTANCE = (
 
 SPC_CT = (
     (YES, "YES"),
-    ("no_spc_ct_value", "no SPC-Ct value (no test result)"),
+    (NO_SPC, "no SPC-Ct value (no test result)"),
 )
 
 NOT_REPEAT_REASONS = (
