@@ -5,7 +5,7 @@ from edcs_crf.admin import crf_status_fieldset_tuple
 from edcs_model_admin import SimpleHistoryAdmin
 
 from ..admin_site import edcs_subject_admin
-from ..forms import ClinicalReviewForm
+# from ..forms import ClinicalReviewForm
 from ..models import DiagnosticTests
 from .modeladmin_mixins import CrfModelAdminMixin
 
@@ -61,20 +61,16 @@ class SubjectDiagnosticTestsAdmin(CrfModelAdminMixin, SimpleHistoryAdmin):
     search_fields = ("report_datetime",)
 
     radio_fields = {
-        "sample_type_a": admin.VERTICAL,
         "xpert_mtb_rif_a": admin.VERTICAL,
         "truenat_mtb_plus_a": admin.VERTICAL,
         "culture_a": admin.VERTICAL,
         "smear_microscopy_a": admin.VERTICAL,
         "mods_a": admin.VERTICAL,
-        "other_test_a": admin.VERTICAL,
         "other_test_result_a": admin.VERTICAL,
         "xpert_mtb_rif_b": admin.VERTICAL,
         "truenat_mtb_plus_b": admin.VERTICAL,
         "culture_b": admin.VERTICAL,
         "smear_microscopy_b": admin.VERTICAL,
         "mods_b": admin.VERTICAL,
-        "other_test_b": admin.VERTICAL,
         "other_test_result_b": admin.VERTICAL,
-        "remarks": admin.VERTICAL,
     }

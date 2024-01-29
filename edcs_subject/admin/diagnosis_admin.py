@@ -5,7 +5,7 @@ from edcs_crf.admin import crf_status_fieldset_tuple
 from edcs_model_admin import SimpleHistoryAdmin
 
 from ..admin_site import edcs_subject_admin
-from ..forms import ClinicalReviewForm
+# from ..forms import ClinicalReviewForm
 from ..models import DiagnosisCrf
 from .modeladmin_mixins import CrfModelAdminMixin
 

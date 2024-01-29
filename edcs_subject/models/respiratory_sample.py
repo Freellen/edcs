@@ -87,6 +87,7 @@ class RespiratorySample(CrfModelMixin, edcs_models.BaseUuidModel):
     sample_volume = models.DecimalField(
         verbose_name="Approximate volume sample?",
         max_digits=6,
+        decimal_places=2,
         null=True,
         blank=True,
         help_text="in mL"
@@ -114,6 +115,7 @@ class RespiratorySample(CrfModelMixin, edcs_models.BaseUuidModel):
 
     afb_result_a = models.CharField(
         verbose_name="Results A?",
+        max_length=80,
         null=True,
         blank=True,
         choices=AFB_RESULTS,

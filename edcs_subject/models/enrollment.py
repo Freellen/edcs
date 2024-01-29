@@ -68,6 +68,7 @@ class EnrollmentCRF(CrfModelMixin, edcs_models.BaseUuidModel):
 
     TB_treatment_duration = models.CharField(
         verbose_name="How long ago was the participant treated for TB?",
+        max_length=200,
         null=True,
         blank=True,
     )
@@ -133,6 +134,7 @@ class EnrollmentCRF(CrfModelMixin, edcs_models.BaseUuidModel):
 
     resp_sample_type_DST = models.CharField(
         verbose_name="Sample type",
+        max_length=200,
         null=True,
         blank=True,
     )
@@ -145,6 +147,7 @@ class EnrollmentCRF(CrfModelMixin, edcs_models.BaseUuidModel):
 
     resp_sample_type_seq = models.CharField(
         verbose_name="Sample type",
+        max_length=200,
         null=True,
         blank=True,
     )
