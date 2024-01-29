@@ -179,4 +179,5 @@ class SubjectDrugSusceptibilityAdmin(CrfModelAdminMixin, SimpleHistoryAdmin):
         "nanopore_para_aminosalicylic": admin.VERTICAL,
         "genotype_mtbdrplus": admin.VERTICAL,
         "genotype_mtbdrsi": admin.VERTICAL,
+        "crf_status": admin.VERTICAL,
     }

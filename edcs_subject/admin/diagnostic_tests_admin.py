@@ -73,4 +73,5 @@ class SubjectDiagnosticTestsAdmin(CrfModelAdminMixin, SimpleHistoryAdmin):
         "smear_microscopy_b": admin.VERTICAL,
         "mods_b": admin.VERTICAL,
         "other_test_result_b": admin.VERTICAL,
+        "crf_status": admin.VERTICAL,
     }

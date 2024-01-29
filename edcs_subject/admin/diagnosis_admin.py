@@ -98,4 +98,5 @@ class SubjectDiagnosisAdmin(CrfModelAdminMixin, SimpleHistoryAdmin):
         "treatment_based_result": admin.VERTICAL,
         "regimen_changed": admin.VERTICAL,
         "treatment_outcome": admin.VERTICAL,
+        "crf_status": admin.VERTICAL,
     }

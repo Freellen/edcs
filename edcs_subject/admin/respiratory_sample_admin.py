@@ -124,4 +124,5 @@ class SubjectRespiratorySampleAdmin(CrfModelAdminMixin, SimpleHistoryAdmin):
         "truenat_repeat_mtb_error_code": admin.VERTICAL,
         "truenat_repeat_rif_resistance": admin.VERTICAL,
         "truenat_repeat_spc_ct_available": admin.VERTICAL,
+        "crf_status": admin.VERTICAL,
     }

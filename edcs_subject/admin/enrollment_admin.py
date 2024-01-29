@@ -122,4 +122,5 @@ class SubjectEnrollmentAdmin(CrfModelAdminMixin, SimpleHistoryAdmin):
         "lymph_node_aspirate": admin.VERTICAL,
         "stool": admin.VERTICAL,
         "chest_xray": admin.VERTICAL,
+        "crf_status": admin.VERTICAL,
     }
