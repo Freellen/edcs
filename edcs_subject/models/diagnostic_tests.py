@@ -1,16 +1,8 @@
 from django.db import models
-from django.utils.safestring import mark_safe
-
-from edcs_constants.choices import (
-    YES_NO,
-)
-
 from edcs_model import models as edcs_models
 from edcs_utils import get_utcnow
 
-from ..choices import RESPIRATORY_YES, RESPIRATORY_REASONS, APPEARANCE, ACCESSION_STATUS, \
-    AFB_TECHNIQUE, AFB_RESULTS, RIF_RESISTANCE, MTB, SPC_CT, NOT_REPEAT_REASONS, \
-    DX_TEST_RESULTS
+from ..choices import DX_TEST_RESULTS
 from ..model_mixins import CrfModelMixin
 
 
