@@ -11,3 +11,4 @@ POS_CK20 = "POS_CK20"
 POS_CK7 = "POS_CK7"
 POS_CK5_6 = "POS_CK5_6"
 HOSPITAL_CLINIC = "hospital_clinic"
+YES_TWO = 'yes_two'

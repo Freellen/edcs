@@ -110,7 +110,7 @@ class EnrollmentCRF(CrfModelMixin, edcs_models.BaseUuidModel):
         choices=YES_NO_UNKNOWN,
     )
 
-    other_disease_specify = models.TextField(
+    other_disease_specify = models.CharField(
         verbose_name="If yes, to other relevant disease/medical condition?",
         max_length=45,
         null=True,
@@ -143,6 +143,7 @@ class EnrollmentCRF(CrfModelMixin, edcs_models.BaseUuidModel):
         verbose_name="Date of Sample for sequencing collection",
         null=True,
         blank=True,
+        help_text="only if two samples were collected"
     )
 
     resp_sample_type_seq = models.CharField(
@@ -150,6 +151,7 @@ class EnrollmentCRF(CrfModelMixin, edcs_models.BaseUuidModel):
         max_length=200,
         null=True,
         blank=True,
+        help_text="only if two samples were collected"
     )
 
     pleural_fluid = models.CharField(

@@ -41,7 +41,7 @@ from edcs_subject.constants import (
     POS_PANCYTOKERATINE,
     POS_TTF1,
     SCHEDULED,
-    UNSCHEDULED,
+    UNSCHEDULED, YES_TWO,
 )
 
 from .constants import NON_SMALL_CELL
@@ -899,9 +899,9 @@ MEDICAL_CONDITIONS = (
 )
 
 RESPIRATORY_SAMPLES = (
-    ("yes_two", "Yes, two samples were collected"),
+    (YES_TWO, "Yes, two samples were collected"),
     ("no_one", "No, one sample was collected"),
-    ("no", "No, no such samples were collected "),
+    (NO, "No, no such samples were collected "),
 )
 
 TB_DIAGNOSIS_MADE = (
