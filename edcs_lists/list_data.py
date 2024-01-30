@@ -23,11 +23,11 @@ list_data = {
         (OTHER, "Other"),
     ],
     "edcs_lists.otherdxmade": [
-        ("chronic_cough", "Non-tuberculous mycobacteria"),
-        ("haemoptysis", "COVID-19"),
-        ("chest_xray", "Bacterial pneumonia"),
-        ("contact_tb_patient", "Silicosis"),
-        ("weight_loss", "Asbestosis"),
+        ("non_tuberculous_mycobacteria", "Non-tuberculous mycobacteria"),
+        ("covid_19", "COVID-19"),
+        ("bacterial_pneumonia", "Bacterial pneumonia"),
+        ("silicosis", "Silicosis"),
+        ("asbestosis", "Asbestosis"),
         (OTHER, "Other"),
     ],
 }

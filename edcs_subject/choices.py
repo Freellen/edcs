@@ -41,7 +41,7 @@ from edcs_subject.constants import (
     POS_PANCYTOKERATINE,
     POS_TTF1,
     SCHEDULED,
-    UNSCHEDULED, YES_TWO, ONE, TWO, THREE, NO_SPC,
+    UNSCHEDULED, YES_TWO, ONE, TWO, THREE, NO_SPC, REFERRED_TREATMENT, NOT_STARTED,
 )
 
 from .constants import NON_SMALL_CELL
@@ -912,8 +912,8 @@ TB_DIAGNOSIS_MADE = (
 
 TB_TREATMENT_START = (
     (YES, "Yes"),
-    ("referred_treatment", "Patient referred for treatment"),
-    ("not_started", "Not started"),
+    (REFERRED_TREATMENT, "Patient referred for treatment"),
+    (NOT_STARTED, "Not started"),
 )
 
 TREATMENT_REGIMEN = (
