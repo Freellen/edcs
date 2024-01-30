@@ -41,7 +41,8 @@ from edcs_subject.constants import (
     POS_PANCYTOKERATINE,
     POS_TTF1,
     SCHEDULED,
-    UNSCHEDULED, YES_TWO, ONE, TWO, THREE, NO_SPC, REFERRED_TREATMENT, NOT_STARTED,
+    UNSCHEDULED, YES_TWO, ONE, TWO, THREE, NO_SPC, REFERRED_TREATMENT, NOT_STARTED, RESISTANT,
+    SUSCEPTIBLE, NO_RESULT,
 )
 
 from .constants import NON_SMALL_CELL
@@ -1021,9 +1022,9 @@ DX_TEST_RESULTS = (
 
 MIC = (
     (NOT_APPLICABLE, "Not applicable"),
-    ("resistant", "Resistant"),
-    ("susceptible", "Susceptible"),
-    ("no_result", "No result"),
+    (RESISTANT, "Resistant"),
+    (SUSCEPTIBLE, "Susceptible"),
+    (NO_RESULT, "No result"),
 )
 
 XPERT_MTB_RIF = (

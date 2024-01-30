@@ -24,6 +24,8 @@ class DrugSusceptibilityTests(CrfModelMixin, edcs_models.BaseUuidModel):
     phenotypic_rifampicin_mic = models.CharField(
         verbose_name="MIC",
         max_length=125,
+        blank=True,
+        null=True,
     )
 
     phenotypic_isoniazid = models.CharField(
@@ -35,6 +37,8 @@ class DrugSusceptibilityTests(CrfModelMixin, edcs_models.BaseUuidModel):
     phenotypic_isoniazid_mic = models.CharField(
         verbose_name="MIC",
         max_length=125,
+        blank=True,
+        null=True,
     )
 
     phenotypic_levofloxacin = models.CharField(
@@ -46,6 +50,8 @@ class DrugSusceptibilityTests(CrfModelMixin, edcs_models.BaseUuidModel):
     phenotypic_levofloxacin_mic = models.CharField(
         verbose_name="MIC",
         max_length=125,
+        blank=True,
+        null=True,
     )
 
     phenotypic_moxifloxacin = models.CharField(
@@ -57,6 +63,8 @@ class DrugSusceptibilityTests(CrfModelMixin, edcs_models.BaseUuidModel):
     phenotypic_moxifloxacin_mic = models.CharField(
         verbose_name="MIC",
         max_length=125,
+        blank=True,
+        null=True,
     )
 
     phenotypic_bedaquiline = models.CharField(
@@ -68,6 +76,8 @@ class DrugSusceptibilityTests(CrfModelMixin, edcs_models.BaseUuidModel):
     phenotypic_bedaquiline_mic = models.CharField(
         verbose_name="MIC",
         max_length=125,
+        blank=True,
+        null=True,
     )
 
     phenotypic_linezolid = models.CharField(
@@ -79,6 +89,8 @@ class DrugSusceptibilityTests(CrfModelMixin, edcs_models.BaseUuidModel):
     phenotypic_linezolid_mic = models.CharField(
         verbose_name="MIC",
         max_length=125,
+        blank=True,
+        null=True,
     )
 
     phenotypic_clofazimine = models.CharField(
@@ -90,6 +102,8 @@ class DrugSusceptibilityTests(CrfModelMixin, edcs_models.BaseUuidModel):
     phenotypic_clofazimine_mic = models.CharField(
         verbose_name="MIC",
         max_length=125,
+        blank=True,
+        null=True,
     )
 
     phenotypic_cycloserine = models.CharField(
@@ -101,6 +115,8 @@ class DrugSusceptibilityTests(CrfModelMixin, edcs_models.BaseUuidModel):
     phenotypic_cycloserine_mic = models.CharField(
         verbose_name="MIC",
         max_length=125,
+        blank=True,
+        null=True,
     )
 
     phenotypic_terizidone = models.CharField(
@@ -112,6 +128,8 @@ class DrugSusceptibilityTests(CrfModelMixin, edcs_models.BaseUuidModel):
     phenotypic_terizidone_mic = models.CharField(
         verbose_name="MIC",
         max_length=125,
+        blank=True,
+        null=True,
     )
 
     phenotypic_ethambutol = models.CharField(
@@ -123,6 +141,8 @@ class DrugSusceptibilityTests(CrfModelMixin, edcs_models.BaseUuidModel):
     phenotypic_ethambutol_mic = models.CharField(
         verbose_name="MIC",
         max_length=125,
+        blank=True,
+        null=True,
     )
 
     phenotypic_delamanid = models.CharField(
@@ -134,6 +154,8 @@ class DrugSusceptibilityTests(CrfModelMixin, edcs_models.BaseUuidModel):
     phenotypic_delamanid_mic = models.CharField(
         verbose_name="MIC",
         max_length=125,
+        blank=True,
+        null=True,
     )
 
     phenotypic_pyrazinamide = models.CharField(
@@ -145,6 +167,8 @@ class DrugSusceptibilityTests(CrfModelMixin, edcs_models.BaseUuidModel):
     phenotypic_pyrazinamide_mic = models.CharField(
         verbose_name="MIC",
         max_length=125,
+        blank=True,
+        null=True,
     )
 
     phenotypic_imipenem_cilastatin = models.CharField(
@@ -156,6 +180,8 @@ class DrugSusceptibilityTests(CrfModelMixin, edcs_models.BaseUuidModel):
     phenotypic_imipenem_cilastatin_mic = models.CharField(
         verbose_name="MIC",
         max_length=125,
+        blank=True,
+        null=True,
     )
 
     phenotypic_meropenem = models.CharField(
@@ -167,6 +193,8 @@ class DrugSusceptibilityTests(CrfModelMixin, edcs_models.BaseUuidModel):
     phenotypic_meropenem_mic = models.CharField(
         verbose_name="MIC",
         max_length=125,
+        blank=True,
+        null=True,
     )
 
     phenotypic_amikacin = models.CharField(
@@ -178,6 +206,8 @@ class DrugSusceptibilityTests(CrfModelMixin, edcs_models.BaseUuidModel):
     phenotypic_amikacin_mic = models.CharField(
         verbose_name="MIC",
         max_length=125,
+        blank=True,
+        null=True,
     )
 
     phenotypic_streptomycin = models.CharField(
@@ -189,6 +219,8 @@ class DrugSusceptibilityTests(CrfModelMixin, edcs_models.BaseUuidModel):
     phenotypic_streptomycin_mic = models.CharField(
         verbose_name="MIC",
         max_length=125,
+        blank=True,
+        null=True,
     )
 
     phenotypic_ethionamide = models.CharField(
@@ -200,6 +232,8 @@ class DrugSusceptibilityTests(CrfModelMixin, edcs_models.BaseUuidModel):
     phenotypic_ethionamide_mic = models.CharField(
         verbose_name="MIC",
         max_length=125,
+        blank=True,
+        null=True,
     )
 
     phenotypic_prothionamide = models.CharField(
@@ -211,6 +245,8 @@ class DrugSusceptibilityTests(CrfModelMixin, edcs_models.BaseUuidModel):
     phenotypic_prothionamide_mic = models.CharField(
         verbose_name="MIC",
         max_length=125,
+        blank=True,
+        null=True,
     )
 
     phenotypic_para_aminosalicylic = models.CharField(
@@ -222,6 +258,8 @@ class DrugSusceptibilityTests(CrfModelMixin, edcs_models.BaseUuidModel):
     phenotypic_para_aminosalicylic_mic = models.CharField(
         verbose_name="MIC",
         max_length=125,
+        blank=True,
+        null=True,
     )
 
     xpert_mtb_refampicin = models.CharField(
@@ -275,6 +313,8 @@ class DrugSusceptibilityTests(CrfModelMixin, edcs_models.BaseUuidModel):
     nanopore_rifampicin_mic = models.CharField(
         verbose_name="MIC",
         max_length=125,
+        blank=True,
+        null=True,
     )
 
     nanopore_isoniazid = models.CharField(
@@ -286,6 +326,8 @@ class DrugSusceptibilityTests(CrfModelMixin, edcs_models.BaseUuidModel):
     nanopore_isoniazid_mic = models.CharField(
         verbose_name="MIC",
         max_length=125,
+        blank=True,
+        null=True,
     )
 
     nanopore_levofloxacin = models.CharField(
@@ -297,6 +339,8 @@ class DrugSusceptibilityTests(CrfModelMixin, edcs_models.BaseUuidModel):
     nanopore_levofloxacin_mic = models.CharField(
         verbose_name="MIC",
         max_length=125,
+        blank=True,
+        null=True,
     )
 
     nanopore_moxifloxacin = models.CharField(
@@ -308,6 +352,8 @@ class DrugSusceptibilityTests(CrfModelMixin, edcs_models.BaseUuidModel):
     nanopore_moxifloxacin_mic = models.CharField(
         verbose_name="MIC",
         max_length=125,
+        blank=True,
+        null=True,
     )
 
     nanopore_bedaquiline = models.CharField(
@@ -319,6 +365,8 @@ class DrugSusceptibilityTests(CrfModelMixin, edcs_models.BaseUuidModel):
     nanopore_bedaquiline_mic = models.CharField(
         verbose_name="MIC",
         max_length=125,
+        blank=True,
+        null=True,
     )
 
     nanopore_linezolid = models.CharField(
@@ -330,6 +378,8 @@ class DrugSusceptibilityTests(CrfModelMixin, edcs_models.BaseUuidModel):
     nanopore_linezolid_mic = models.CharField(
         verbose_name="MIC",
         max_length=125,
+        blank=True,
+        null=True,
     )
 
     nanopore_clofazimine = models.CharField(
@@ -341,6 +391,8 @@ class DrugSusceptibilityTests(CrfModelMixin, edcs_models.BaseUuidModel):
     nanopore_clofazimine_mic = models.CharField(
         verbose_name="MIC",
         max_length=125,
+        blank=True,
+        null=True,
     )
 
     nanopore_cycloserine = models.CharField(
@@ -352,6 +404,8 @@ class DrugSusceptibilityTests(CrfModelMixin, edcs_models.BaseUuidModel):
     nanopore_cycloserine_mic = models.CharField(
         verbose_name="MIC",
         max_length=125,
+        blank=True,
+        null=True,
     )
 
     nanopore_terizidone = models.CharField(
@@ -363,6 +417,8 @@ class DrugSusceptibilityTests(CrfModelMixin, edcs_models.BaseUuidModel):
     nanopore_terizidone_mic = models.CharField(
         verbose_name="MIC",
         max_length=125,
+        blank=True,
+        null=True,
     )
 
     nanopore_ethambutol = models.CharField(
@@ -374,6 +430,8 @@ class DrugSusceptibilityTests(CrfModelMixin, edcs_models.BaseUuidModel):
     nanopore_ethambutol_mic = models.CharField(
         verbose_name="MIC",
         max_length=125,
+        blank=True,
+        null=True,
     )
 
     nanopore_delamanid = models.CharField(
@@ -385,6 +443,8 @@ class DrugSusceptibilityTests(CrfModelMixin, edcs_models.BaseUuidModel):
     nanopore_delamanid_mic = models.CharField(
         verbose_name="MIC",
         max_length=125,
+        blank=True,
+        null=True,
     )
 
     nanopore_pyrazinamide = models.CharField(
@@ -396,6 +456,8 @@ class DrugSusceptibilityTests(CrfModelMixin, edcs_models.BaseUuidModel):
     nanopore_pyrazinamide_mic = models.CharField(
         verbose_name="MIC",
         max_length=125,
+        blank=True,
+        null=True,
     )
 
     nanopore_imipenem_cilastatin = models.CharField(
@@ -407,6 +469,8 @@ class DrugSusceptibilityTests(CrfModelMixin, edcs_models.BaseUuidModel):
     nanopore_imipenem_cilastatin_mic = models.CharField(
         verbose_name="MIC",
         max_length=125,
+        blank=True,
+        null=True,
     )
 
     nanopore_meropenem = models.CharField(
@@ -418,6 +482,8 @@ class DrugSusceptibilityTests(CrfModelMixin, edcs_models.BaseUuidModel):
     nanopore_meropenem_mic = models.CharField(
         verbose_name="MIC",
         max_length=125,
+        blank=True,
+        null=True,
     )
 
     nanopore_amikacin = models.CharField(
@@ -429,6 +495,8 @@ class DrugSusceptibilityTests(CrfModelMixin, edcs_models.BaseUuidModel):
     nanopore_amikacin_mic = models.CharField(
         verbose_name="MIC",
         max_length=125,
+        blank=True,
+        null=True,
     )
 
     nanopore_streptomycin = models.CharField(
@@ -440,6 +508,8 @@ class DrugSusceptibilityTests(CrfModelMixin, edcs_models.BaseUuidModel):
     nanopore_streptomycin_mic = models.CharField(
         verbose_name="MIC",
         max_length=125,
+        blank=True,
+        null=True,
     )
 
     nanopore_ethionamide = models.CharField(
@@ -451,6 +521,8 @@ class DrugSusceptibilityTests(CrfModelMixin, edcs_models.BaseUuidModel):
     nanopore_ethionamide_mic = models.CharField(
         verbose_name="MIC",
         max_length=125,
+        blank=True,
+        null=True,
     )
 
     nanopore_prothionamide = models.CharField(
@@ -462,6 +534,8 @@ class DrugSusceptibilityTests(CrfModelMixin, edcs_models.BaseUuidModel):
     nanopore_prothionamide_mic = models.CharField(
         verbose_name="MIC",
         max_length=125,
+        blank=True,
+        null=True,
     )
 
     nanopore_para_aminosalicylic = models.CharField(
@@ -473,6 +547,8 @@ class DrugSusceptibilityTests(CrfModelMixin, edcs_models.BaseUuidModel):
     nanopore_para_aminosalicylic_mic = models.CharField(
         verbose_name="MIC",
         max_length=125,
+        blank=True,
+        null=True,
     )
 
     genotype_mtbdrplus = models.CharField(
