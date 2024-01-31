@@ -62,27 +62,7 @@ SUBJECT_CONSENT_MODEL = env.str("EDCS_SUBJECT_CONSENT_MODEL")
 SUBJECT_VISIT_MODEL = env.str("EDCS_SUBJECT_VISIT_MODEL")
 
 ALLOWED_HOSTS = [
-    "www.u54lungcancer.org",
-    "u54lungcancer.org",
-    "mnh.uat.tz.u54lungcancer.org",
-    "mnrh.uat.ug.u54lungcancer.org",
-    "orci.uat.tz.u54lungcancer.org",
-    "bugando.uat.tz.u54lungcancer.org",
-    "mbeya.uat.tz.u54lungcancer.org",
-    "uci.uat.ug.u54lungcancer.org",
-    "mnh.tz.edcs.u54lungcancer.org",
-    "orci.tz.edcs.u54lungcancer.org",
-    "bugando.tz.edcs.u54lungcancer.org",
-    "mbeya.tz.edcs.u54lungcancer.org",
-    "mwananyamala.tz.edcs.u54lungcancer.org",
-    "mnrh.ug.edcs.u54lungcancer.org",
-    "uci.ug.edcs.u54lungcancer.org",
-    "mli.ug.edcs.u54lungcancer.org",
-    "mnh.uat.tz.edcs.u54lungcancer.org",
-    "orci.uat.tz.edcs.u54lungcancer.org",
-    "mnrh.uat.ug.edcs.u54lungcancer.org",
-    "uci.uat.ug.edcs.u54lungcancer.org",
-    "edcs.u54lungcancer.org",
+    "ctrl.uat.tz.redcs.org.redcs.org",
     "localhost",
 ]
 
