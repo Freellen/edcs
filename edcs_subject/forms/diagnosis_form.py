@@ -56,17 +56,17 @@ class DiagnosisCrfFormValidator(FormValidator):
         self.other_disease = self.cleaned_data.get("other_disease")
 
     def clean(self):
-        self.required_if(
-            YES, field="TB_dx", field_required="TB_dx_made"
+        self.applicable_if(
+            YES, field="TB_dx", field_applicable="TB_dx_made"
         )
         self.required_if(
             OTHER, field="TB_dx_made", field_required="TB_dx_made_other"
         )
-        self.required_if(
-            YES, field="TB_dx", field_required="TB_dx_xpert_truenat_nga"
+        self.applicable_if(
+            YES, field="TB_dx", field_applicable="TB_dx_xpert_truenat_nga"
         )
-        self.required_if(
-            YES, field="TB_dx_xpert_truenat_nga", field_required="TB_dx_xpert_truenat_nga_date"
+        self.applicable_if(
+            YES, field="TB_dx_xpert_truenat_nga", field_applicable="TB_dx_xpert_truenat_nga_date"
         )
         self.m2m_other_specify(
             OTHER, m2m_field="other_disease", field_other="info_TB_dx_made_other"

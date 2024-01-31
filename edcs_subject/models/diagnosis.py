@@ -2,7 +2,7 @@ from django.db import models
 from django.utils.safestring import mark_safe
 
 from edcs_constants.choices import (
-    YES_NO,
+    YES_NO, YES_NO_NA,
 )
 from edcs_lists.models import InfoTbDxMade, OtherDxMade
 from edcs_model import models as edcs_models
@@ -38,7 +38,7 @@ class DiagnosisCrf(CrfModelMixin, edcs_models.BaseUuidModel):
         verbose_name=mark_safe("On what test result(s) was the bacteriological diagnosis "
                                "based on Xpert/Truenat on sputum/NGA?"),
         max_length=45,
-        choices=YES_NO,
+        choices=YES_NO_NA,
     )
 
     TB_dx_xpert_truenat_nga_date = models.DateField(

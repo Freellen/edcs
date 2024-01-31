@@ -128,8 +128,8 @@ class RespiratorySampleFormValidator(FormValidator):
         self.required_if(
             YES, field="test_repeated", field_required="test_repeated_date"
         )
-        self.required_if(
-            NO, field="test_repeated", field_required="test_not_repeated_reason"
+        self.applicable_if(
+            NO, field="test_repeated", field_applicable="test_not_repeated_reason"
         )
         self.required_if(
             OTHER, field="test_not_repeated_reason",
@@ -177,9 +177,9 @@ class RespiratorySampleFormValidator(FormValidator):
         self.required_if(
             YES, field="truenat_test_repeated", field_required="truenat_test_repeated_date"
         )
-        self.required_if(
+        self.applicable_if(
             NO, field="truenat_test_repeated",
-            field_required="truenat_test_not_repeated_reason"
+            field_applicable="truenat_test_not_repeated_reason"
         )
         self.required_if(
             OTHER, field="truenat_test_not_repeated_reason",

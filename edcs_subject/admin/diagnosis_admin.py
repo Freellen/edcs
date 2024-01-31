@@ -89,6 +89,11 @@ class SubjectDiagnosisAdmin(CrfModelAdminMixin, SimpleHistoryAdmin):
 
     search_fields = ("report_datetime",)
 
+    filter_horizontal = [
+        "info_TB_dx_made",
+        "other_dx",
+    ]
+
     radio_fields = {
         "TB_dx": admin.VERTICAL,
         "TB_dx_made": admin.VERTICAL,

@@ -906,6 +906,7 @@ RESPIRATORY_SAMPLES = (
 )
 
 TB_DIAGNOSIS_MADE = (
+    (NOT_APPLICABLE, "Not applicable"),
     ("signs_symptoms_only", "Based on clinical signs and symptoms only "),
     ("signs_symptoms_bacteriology", "Based a combination of signs, symptoms and bacteriology"),
     (OTHER, "Other"),
@@ -1008,6 +1009,7 @@ SPC_CT = (
 )
 
 NOT_REPEAT_REASONS = (
+    (NOT_APPLICABLE, "Not applicable"),
     ("sample_lost ", "sample lost "),
     ("not_enough_sample", "not enough sample left"),
     (OTHER, "Other"),
