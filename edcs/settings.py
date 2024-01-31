@@ -63,6 +63,7 @@ SUBJECT_VISIT_MODEL = env.str("EDCS_SUBJECT_VISIT_MODEL")
 
 ALLOWED_HOSTS = [
     "ctrl.uat.tz.redcs.org.redcs.org",
+    "ctrl.tz.redcs.org.redcs.org",
     "localhost",
 ]
 
