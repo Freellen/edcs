@@ -1,6 +1,6 @@
 {% if download %}
 <a href="{% url 'edcs_dashboard:download-data' %}" class="btn btn-sm btn-info tip"  title="{{ title }}"
-   > Download
+   disabled> Download
     <span class="glyphicon glyphicon-download glyphicon glyphicon-white"></span></a>
 {% else %}
     <a href="#" style="color: firebrick">You don't have permission to download data</a>
